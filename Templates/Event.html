@@ -1,0 +1,156 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Attendies</title>
+    <link rel="stylesheet" href="{%static 'report.css'%}">
+    <script src="date.js"></script>
+    <style> 
+        input {
+          width: 80%;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          border: none;
+          border-bottom: 2px solid grey;
+        }
+        
+            </style>
+        </style>
+</head>
+<body>
+    <div style="display: grid-row">
+   
+    <div class="style">
+        <center>
+        <img class="img" src="{% static '/images/icons8-photo.gif' %}" alt="Avatar" style="width:50px">
+        <h2> Admin name</h2>
+        <p>administrator</p>
+        </center>
+    </div>
+    <div class="design">
+        <center>
+            <h3> <a href="{%url 'samp6'%}"><img src= "{% static '/images/event attendees.png' %}" style="width:20px"></a>
+               
+        EVENT ATTENDEES</h3><br>
+
+        <h3 style="background-color: rgb(84, 143, 143)"><a href="{%url 'samp4'%}"><img src= "{% static '/images/members.png' %}" style="width:20px"></a>
+           
+        MEMBERS</h3><br>
+        <h3><a href="{%url 'samp9'%}"><img src= "{% static '/images/report.png' %}" style="width:20px"></a>
+            
+        REPORT</h3>
+
+        </center>
+    </div>
+    </div>
+    <div class="main">
+        <div style="display:flex; justify-content:space-evenly">
+            <div style="display:flex;"><p><b>last updated: </b> Jamuna | <p>{{date}}
+            </p>
+                </p></div>
+        
+        <div> <p><img src= " {% static '/images/location.png' %}" width="20" height="20">Chennai</div></p>
+        </div>  
+        <div style="display:flex; justify-content:space-evenly">
+            <a href="{%url 'samp3'%}"><img src= " {% static '/images/back.png' %}" width="20" height="20"></a>
+           
+        <p><p>Start Date
+        <input required type ="date" name="date"></p>
+        <p>End Date
+        <input required type ="date" name="date"></p> </p>
+       
+        <a href="{%url 'samp16'%}"><img src="{% static '/images/logout.png' %}" width="20" height="20"></a>
+    </div>
+    <hr style="width: 100%;">
+    <div style="display:flex; justify-content:space-evenly">
+    <p>Total members:05
+    <div><button style="width: 250px;height: 30px;">Reason</button></div>
+    <div><button onclick="myFun()" style="background-color: rgb(206, 57, 57);height: 30px;">Request</button></div>
+    <script>
+            function myFun() {
+            alert("Your Request received.Kindly check after 12 to 24 hrs");
+}
+    </script>
+    <div><button style="background-color: chartreuse;height: 30px;">Export Excel</button></p></div>
+    </div>
+
+    <div style="display:flex; justify-content:space-evenly">
+        <div><a href="{%url 'samp6'%}"><button style="color: rgb(103, 167, 8);height: 30px;">Refresh</button></a></div>
+        
+        <div><p>LTM-Lords Table meeting &nbsp;&nbsp;&nbsp;PM- Prayer Meeting&nbsp;&nbsp;&nbsp;SMG:Small group Meeting &nbsp;&nbsp;&nbsp;GO-Going Out<br><center>LS-Life study&nbsp;&nbsp;&nbsp;<span style="background-color: chartreuse;" class="dot"></span>&nbsp;Attended&nbsp;&nbsp;&nbsp;<span style="background-color: red;" class="dot"></span>&nbsp;Not Attended</center></p></div>
+    </div>
+    <table class="table" style="width: 60%;">
+        <tr>
+        <th>Name</th>
+        <th>LTM</th>
+        <th>PM</th>
+        <th>SGM</th>
+        <th>GO</th>
+        <th>LS</th>
+    </tr>
+    
+    <tr>
+        
+        <td>Perl</td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: red;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+    
+    </tr>
+    
+    <tr>
+        
+        <td>Perl</td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: red;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+    
+    
+    </tr>
+
+    <tr>
+        
+        <td>Perl</td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: red;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+    
+    
+    </tr>
+
+    <tr>
+        <td>Perl</td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: red;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+    
+    
+    </tr>
+
+    <tr>
+        
+        <td>Perl</td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: red;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+        <td><span style="background-color: chartreuse;" class="dot"></span></td>
+    
+    
+    </tr>    
+    </table>
+    <p><button style="width: 20%;">Reset</button>
+    <button style="width: 20%;">Save</button></p>
+
+</body>
+</html>

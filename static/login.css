@@ -1,0 +1,21 @@
+
+
+.login
+{
+    width: 40%;
+    height: 550px;
+    float: left;
+    display: flex;
+    margin: 40px;
+    
+}
+.color
+{
+    background-color: rgb(68, 180, 68);
+    width: 50%;
+    height: 550px;
+    float: right;
+    text-align:center;
+    display: inline;
+    padding-top: 10%;
+}

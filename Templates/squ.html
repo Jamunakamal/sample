@@ -1,0 +1,188 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" {% static 'divsquare.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+    
+    </style>      
+</head>
+<body>
+    {% for i in range1 %}
+    <h1> print {{i}} </h1>
+    {% endfor %}
+ 
+
+    {% for image in range2 %}
+    <p class="align">
+        <img  style=" width:150px; height:150px " src="{% static '/images/cat.jpg' %}">
+    </p>
+    {%endfor%}
+
+    <h1>Fetching and Printing data in front end</h1>
+    
+    <h2>Personal Information</h2>
+    <table>
+        
+        <tr>
+            <th>ID</th> 
+            <th>Father Name </th>
+            <th>MartialStatus </th>
+            <th>Edu_Qua </th>
+            <th>Year Of passing</th>
+        </tr>
+        {% for fname in fathername%}
+        <tr>
+            <td>{{fname.id}}</td> 
+            <td>{{fname.FatherName}} </td>
+            <td>{{fname.MartialStatus}} </td>
+            <td>{{fname.Edu_Qua}} </td>
+            <td>{{fname.YearOfPassing}}</td>
+        </tr>
+    {%endfor%}
+    </table>
+   <h2>Name   </h2>
+   <table>
+    <tr> 
+        <th>Id</th>
+        <th> Firstname</th>
+        <th> LastName</th>
+        <th>UserName</th>
+    </tr>
+    {% for names in name %}
+    <tr>
+        <td>{{names.id}}</td>
+        <td>{{names.fname}}</td>
+        <td>{{names.lname}}</td>
+        <td>{{names.username}}</td>
+    </tr>
+    {%endfor%}
+   </table>
+
+   <h2>Professional Details   </h2>
+   <table>
+    <tr> 
+        <th>Id</th>
+        <th> Current Company</th>
+        <th> Reliving Date</th>
+        <th>New Company</th>
+        <th>Experience</th>
+    </tr>
+    {% for profo in profo_details %}
+    <tr>
+        <td>{{profo.id}}</td>
+        <td>{{profo.Cur_Company}}</td>
+        <td>{{profo.Reliving_Date}}</td>
+        <td>{{profo.New_Company}}</td>
+        <td>{{profo.Experience}}</td>
+    </tr>
+    {%endfor%}
+   </table>
+   <h2>Salary Details   </h2>
+   <table>
+    <tr> 
+        <th>Id</th>
+        <th>Designation</th>
+        <th> Expected Salary</th>
+     </tr>
+     {% for expect in expec_salary %}
+     <tr>
+        <td>{{expect.id}}</td>
+        <td>{{expect.Designation}}</td>
+        <td>{{expect.expect_salary}}</td>
+     </tr>
+     {%endfor%}
+   </table>
+
+   <h2>Post Salary  </h2>
+   <table>
+    <tr> 
+        <th>Id</th>
+        <th>Designation</th>
+        <th> Salary</th>
+     </tr>
+     {% for post in post_salary %}
+     <tr>
+        <td>{{post.id}}</td>
+        <td>{{post.Designation}}</td>
+        <td>{{post.salary}}</td>
+     </tr>
+     {%endfor%}
+   </table>
+   <h2>Registration Form</h2>
+   <table>
+       <tr>
+           <th>Mobile Number</th>
+           <th>Date Of Birth</th>
+           <th>Age</th>
+           <th>Gender</th>
+           <th>Email Id</th>
+           <th>Known Language</th>
+           <th>Country</th>
+           <th>Address</th>
+       </tr>
+       {% for a in regform %}
+       <tr>
+        <td>{{a.MobileNumber}}</td>
+        <td>{{a.DateOfBirth}}</td>
+        <td>{{a.Age}}</td>
+        <td>{{a.Gender}}</td>
+        <td>{{a.EmailID}}</td>
+        <td>{{a.KnownLang}}</td>
+        <td>{{a.Country}}</td>
+        <td>{{a.Address}}</td>
+       </tr>
+       {%endfor%}
+   </table>
+
+
+   <h2>Saint Information</h2>
+   <table>
+       <tr>
+           <th>ID</th>
+           <th>Full Name</th>
+           <th>Profossional</th>
+           <th>Gender</th>
+           <th>Date Of birth</th>
+           <th>Mobile Nunmber</th>
+           <th>Email ID</th>
+           <th>Country</th>
+           <th>State</th>
+           <th>District</th>
+           <th>Location</th>
+       </tr>
+       {% for b in information %}
+       <tr>
+        <td>{{b.id}}</td>
+        <td>{{b.Full_Name}}</td>
+        <td>{{b.Professional}}</td>
+        <td>{{b.Gender}}</td>
+        <td>{{b.DateOfBirth}}</td>
+        <td>{{b.MobileNumber}}</td>
+        <td>{{b.EmailID}}</td>
+        <td>{{b.Country}}</td>
+        <td>{{b.State}}</td>
+        <td>{{b.District}}</td>
+        <td>{{b.Location}}</td>
+       </tr>
+       {%endfor%}
+   </table>
+
+</body>
+</html>

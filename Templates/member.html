@@ -1,0 +1,127 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members</title>
+
+    <link rel="stylesheet" href="{%static 'report.css'%}">
+   
+    <style>
+    input {
+        background-image: url("search.png");
+        background-position: 100%;
+        background-repeat: no-repeat;
+        width: 80%;
+        font-size: 20px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+
+    }
+   
+    </style>
+</head>
+<body>
+ 
+    <div style="display: grid-row">
+   
+        <div class="style">
+            <center>
+            <img class="img" src= "{% static '/images/icons8-photo.gif' %}" alt="Avatar" style="width:50px">
+            <h2> Admin name</h2>
+            <p>administrator</p>
+            </center>
+        </div>
+        <div class="design">
+            <center>
+                <h3> <a href="{%url 'samp6'%}"><img src= "{% static '/images/event attendees.png' %}" style="width:20px"></a>
+                   
+            EVENT ATTENDEES</h3><br>
+
+            <h3 style="background-color: rgb(84, 143, 143)"><a href="{%url 'samp4'%}"><img src= "{% static '/images/members.png' %}" style="width:20px"></a>
+               
+            MEMBERS</h3><br>
+            <h3><a href="{%url 'samp9'%}"><img src= "{% static '/images/report.png' %}" style="width:20px"></a>
+                
+            REPORT</h3>
+    
+            </center>
+        </div>
+        </div>
+        <div class="main">
+            <div style="display:flex; justify-content:space-evenly">
+                <div style="display:flex;"><p><b>last updated: </b> Jamuna |<p>{{date}}
+                    </p></div>
+            
+            <div> <p><img src="{% static '/images/location.png' %}" width="20" height="20">Chennai</div></p>
+            </div>  
+
+           <p><a href="{%url 'samp3'%}"><img src="{% static '/images/back.png' %}"  style="margin-left:10px ;"width="20" height="20"></a>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="myInput"  placeholder="filter" title="Type in a name"> 
+            &nbsp;&nbsp;&nbsp;&nbsp;<a href="{%url 'samp16'%}"><img src="{% static '/images/logout.png' %}" width="20" height="20"></a>
+             
+            
+            <hr style="width: 80%;">
+            <div style="display:flex; justify-content:space-evenly">
+                <div><a href="{%url 'samp4'%}"><button style="color: rgb(103, 167, 8);height: 30px;">Refresh</button></a></div>
+
+                <div><p>Total members:05</p></div>
+                <div><a href="{%url 'samp5'%}"><button style="background-color: rgb(206, 57, 57);width: 170px;height: 30px;">Add Members</button></a></div>
+                
+                <div><button style="background-color: chartreuse;height: 30px;">Export Excel</button></p></div>
+    </div>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>RB/SR</th>
+        <th>Mobile</th>
+        <th>Edit</th>
+    </tr>
+    <tr>
+        <td>Richard</td>
+        <td>Working</td>
+        <td>BR</td>
+        <td>+91 9157352942</td>
+        <td><button style="background-color: chartreuse;width: 50px;height: 20px;">Edit</button></p></div></td>
+    </tr>
+    <tr>
+        <td>Richard</td>
+        <td>Working</td>
+        <td>BR</td>
+        <td>+91 9157352942</td>
+        <td><button style="background-color: chartreuse;width: 50px;height: 20px;">Edit</button></p></div></td>
+    </tr>
+    <tr>
+        <td>Richard</td>
+        <td>Working</td>
+        <td>BR</td>
+        <td>+91 9157352942</td>
+        <td><button style="background-color: chartreuse;width: 50px;height: 20px;">Edit</button></p></div></td>
+    </tr>
+    <tr>
+        <td>Richard</td>
+        <td>Working</td>
+        <td>BR</td>
+        <td>+91 9157352942</td>
+        <td><button style="background-color: chartreuse;width: 50px;height: 20px;">Edit</button></p></div></td>
+    </tr>
+    <tr>
+        <td>Richard</td>
+        <td>Working</td>
+        <td>BR</td>
+        <td>+91 9157352942</td>
+        <td><button style="background-color: chartreuse;width: 50px;height: 20px;">Edit</button></p></div></td>
+    </tr>
+    <tr>
+        <td>Richard</td>
+        <td>Working</td>
+        <td>BR</td>
+        <td>+91 9157352942</td>
+        <td><button style="background-color: chartreuse;width: 50px;height: 20px;">Edit</button></p></div></td>
+    </tr>
+</table>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

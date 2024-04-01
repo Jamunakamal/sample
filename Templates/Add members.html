@@ -1,0 +1,169 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add members</title>
+    <link rel="stylesheet" href="{%static 'report.css'%}">
+    
+    <style>
+    .row {
+  display: flex;
+  margin-left: 10%;
+ 
+}
+
+    .column {
+    display: flex;
+  flex: 10%;
+  float: right;
+ 
+ 
+}
+    input {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid grey;
+        }
+    select{
+        width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid grey;
+    }
+    </style>
+</head>
+<body>
+    <div style="display: grid-row">
+   
+        <div class="style">
+            <center>
+            <img class="img" src="{% static '/images/icons8-photo.gif' %}"  alt="Avatar" style="width:50px">
+            <h2> Admin name</h2>
+            <p>administrator</p>
+            </center>
+        </div>
+        <div class="design">
+            <center>
+                <h3> <a href="{%url 'samp6'%}"><img src= "{% static '/images/event attendees.png' %}" style="width:20px"></a>
+                   
+            EVENT ATTENDEES</h3><br>
+
+            <h3 style="background-color: rgb(84, 143, 143)"><a href="{%url 'samp4'%}"><img src= "{% static '/images/members.png' %}" style="width:20px"></a>
+               
+            MEMBERS</h3><br>
+            <h3><a href="{%url 'samp9'%}"><img src= "{% static '/images/report.png' %}" style="width:20px"></a>
+                
+            REPORT</h3>
+    
+            </center>
+        </div>
+        </div>
+        <div class="main">
+            <div style="display:flex; justify-content:space-evenly">
+                <div style="display:flex;"><p><b>last updated: </b> Jamuna | <p> {{date}}
+            
+                    </p>
+                    </p></div>
+            
+            <div> <p><img src="{% static '/images/location.png' %}" width="20" height="20">Chennai</div></p>
+            </div>
+
+            <div class="row"> 
+                <div class="column">
+                    <a href="{%url 'samp3'%}"><img src= "{% static '/images/back.png' %}" width="20" height="20"></a>
+           
+            </div>
+            <div style="margin-right: 10%;">
+                <a href="{%url 'samp16'%}"><img src="{% static '/images/logout.png' %}" width="20" height="20"></a>
+                
+        </div>
+        </div> 
+        <br>
+
+        <div style="margin: 20px;">
+        <h2 >Saint information</h2>
+        
+        <form onsubmit="save()" action="" method="POST"> {% csrf_token %}
+            <div style="display: contents; margin: 10%;">
+            <p><input type="text" name="full_name" placeholder="Full name" required >
+            <input type="text" name="profo" placeholder="Professional" required></p>
+            
+            </div>
+
+
+            <div style="display: contents;">
+               <p> <div style="display: contents;">
+                <select name="Gender" required>
+                <option value="">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                </select>
+                <input style="width: 19%;" type="date" name="dob" placeholder="Date of Birth" required>
+            </div>
+                <input type="number" name="mobile_no" placeholder="Mobile Number" required ></p>
+                </div>
+
+                <div style="display: contents;">
+                <p><input  type="text" name="email" placeholder="Email ID" required>
+
+                    <select style="width: 40%;" name="Country" required>
+                        <option value="">Country</option>
+                        <option value="India" selected>India</option>
+                        <option value="USA">USA</option>
+                        <option value="Japan">Japan</option>
+                        <option value="China">China</option>
+                        <option value="Srilanka">Srilanka</option>
+                        <option value="Austrila">Austrila</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Pakistan">Pakistan</option></select></p>
+                    </div>
+                    <div style="display: contents;">
+                    <p><div style="display: contents;">
+                        
+                    <select name="State" required >
+                        <option value="">State</option>
+                        <option value="Tamil NAdu">Tamil NAdu</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Andhra">Andhra</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Telungana">Telungana</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharastra">Maharastra</option>
+                        <option value="Rajesthan">Rajesthan</option></select>
+                    
+                    
+                    <select name="District" required >
+                        <option value="">District</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Thiruvallur">Thiruvallur</option>
+                        <option value="Chengalpattu">Chengalpattu</option>
+                        <option value="Cuddalore">Cuddalore</option>
+                        <option value="Madurai">Madurai</option>
+                        <option value="Trichy">Trichy</option>
+                        <option value="Salem">Salem</option>
+                        <option value="Coimbatore">Coimbatore</option></select>
+                        </div>
+                        
+                        <input style="width: 40%;" type="text" name="loc" placeholder="location" required></p>
+                    
+        
+        
+    </div>
+    <br><br><br><br><br><br>
+                <input type="submit" value="submit" style="align-items:center;width: 20%;height: 50px;background-color: brown;">
+                <script>
+                    function save(){
+                        alert("Your information saved")
+                    }
+                </script>
+</div>
+</form> 
+</body>
+</html>

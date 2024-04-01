@@ -1,0 +1,67 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{%static 'regform.css'%}"
+</head>
+<body class="color">
+    <center>
+    <h1> Sign Up</h1>
+    </center>
+    <div class="style">
+        <h3 style="text-align :center">Create your own account</h3>
+    
+    <form style="margin:30px" action="" method="POST"> {% csrf_token %}
+    <label> First name:</label>
+    <input required type ="text" placeholder name="fname">
+    <br><br>
+    
+    <label> Last name: </label>
+    <input type ="text" name="lname">
+    <br><br>
+       
+    <label> Date of birth: </label>
+    <input required type ="date" name="dob">
+    <br><br>
+    
+    <label> Age: </label>
+    <input required type ="number" name="age">
+    <br><br>
+    
+    <label name="gender"> Gender: </label>
+    <input type ="radio" name="gender1" value="male">Male
+    <input type ="radio" name="gender1" value="female" checked>Female
+    <br><br>
+      
+    <label name="lang">Known language: </label>
+    <input type ="checkbox" name="lang1" value="english">English
+    <input type ="checkbox" name="lang1" value="tamil">Tamil
+    <input type ="checkbox" name="lang1" value="hindi">Hindi
+    <br><br>
+    
+    <label> Email ID: </label>
+    <input required type ="text" name="id">
+    <br><br>
+    
+    <label> Re-enter Email ID: </label>
+    <input required type ="text" name="id_1">
+    <br><br>
+
+    <label> Password </label>
+    <input required type ="password" name="pwd_1">
+    <br><br>
+    <label> Re-enter Password </label>
+    <input required type ="password" name="pwd_2">
+    <br><br>
+  
+    </div>
+    <center>
+    <input type="submit" class="color2" name="submit">
+    <input type="Reset" class="color2" name="reset">
+    </center>
+    </form>
+    </body>
+    </html>
